@@ -1,0 +1,473 @@
+:root{
+    --primary-color: #ffb727;
+    --secondary-color: #444444;
+    --font-open-sans: 'Open Sans', sans-serif;
+    --font-Great-vibes: 'Great Vibes', cursive;
+    --font-Raleway: 'Raleway', sans-serif;
+    --font-Satisfy: 'Satisfy', cursive;
+}
+
+body{
+    font-family: var(--font-open-sans);
+
+}
+
+a{
+    color: var(--primary-color);
+    
+}
+
+
+
+h1,h2,h3,h4{
+    font-family: var(--font-Raleway);
+}
+
+/* Header */
+header{
+    position: relative;
+    margin-bottom: -6rem;
+    z-index: 1;
+}
+.logo{
+    font-family: var(--font-Great-vibes);
+}
+
+.logo a{
+    color: white;
+    font-size: 2rem;
+}
+
+.menu ul{
+    font-family: var(--font-Raleway);
+    padding-top: 1rem;
+}
+.menu ul li a{
+    text-transform: capitalize;
+    color: white;
+}
+.menu ul li a:hover, .menu ul li a:focus{
+   
+    color: var(--primary-color);
+}
+.nav-link{
+    position: relative;
+}
+
+.menu ul li a::before{
+    content: "";
+    position: absolute;
+    top: 2rem;
+    left: 1rem;
+    background-color: var(--primary-color);
+    width: 0px;
+    height: 2px;
+    visibility: hidden;
+    transition: all .3s ease-in-out;
+}
+
+.menu a:hover::before{
+    visibility: visible;
+    width: 35px;
+
+}
+/* Hero Section  */
+
+#hero{
+    height: 100vh;
+    background: url("img/men-nature.jpg") top right;
+    background-size: cover;
+    position: relative;
+    display: flex;;
+}
+
+#hero::before{
+    content: "";
+    background-color: rgba(0, 0, 0, 0.445);
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+
+}
+
+.hero-content{
+    position: relative;
+    z-index: 99;
+}
+
+#hero h1{
+    font-size: 5rem;
+    font-family: var(--font-Satisfy);
+    color: white;
+}
+
+#hero p{
+    color: #eee;
+    padding-top: 1.5rem;
+
+}
+
+#hero i{
+    font-size: 3rem;
+    color: white;
+    animation: up-down 1.5s ease-in-out infinite alternate-reverse;
+}
+
+#hero i:hover{
+
+    color: var(--primary-color);
+    
+}
+
+@keyframes up-down {
+    0%{
+        transform: translateY(5px);
+    }
+    100%{
+        transform: translateY(-5px);
+    }
+}
+
+/* section common style  */
+
+section{
+    padding: 5rem 0;
+}
+
+.section-title{
+    text-align: center;
+    padding: 2.5rem 0;
+    position: relative;
+
+}
+
+.section-title h2{
+    font-size: 2.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+    color: var(--secondary-color);
+    position: relative;
+    z-index: 3;
+}
+
+.section-title span{
+    position: absolute;
+    top:-10px;
+    left: 0;
+    right: 0;
+    font-size: 4.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #eef0f2;
+
+    
+}
+
+@media (max-width: 572px) {
+    .section-title h2{
+        font-size: 2rem;
+    }
+    .section-title span{
+         top: 5px;
+        font-size: 3rem;
+    }
+}
+
+/* About Section  */
+
+.about .content ul li{
+    display: flex;
+    
+}
+
+.about .content ul li p{
+  font-size: 1rem;
+   margin-left: .5rem;
+    
+}
+
+.about .content i{
+    font-size: 28px;
+    color: var(--primary-color);
+}
+
+.about .count-box i{
+    font-size: 40px;
+    margin-top: 8px;
+}
+.about .count-box span{
+    font-size: 36px;
+    font-weight: 700;
+    margin-left: 1rem;
+   
+
+}
+.about .count-box p{
+    font-size: 1rem;
+    font-weight: 700;
+    font-family: var(--font-Raleway);
+    text-transform: uppercase;
+    line-height:  21px;
+    letter-spacing: 4px;
+     margin-left: 1rem;
+   
+
+}
+
+.materials h2{
+    font-size: 32px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin: 2rem 0;
+}
+
+.tools{
+    width: 100px;
+    height: 100px;
+    position: relative;
+}
+
+.tools img{
+    max-width: 50px;
+    max-height: 50px;
+    object-fit: contain;
+    cursor: pointer;
+    transition: all .5s ease-in-out;
+}
+
+.tools img:hover{
+    transform: scale(1.25)
+}
+
+@media (max-width: 1200px) {
+    .about .content ul li p {
+        font-size: 0.9rem;
+       
+    }
+}
+
+@media (max-width: 991px) {
+    .content {
+        margin-top: 3rem;
+    }
+}
+
+/* portfolio */
+
+.portfolio .icon-box{
+    padding: 2.2rem;
+    border: 2px solid white;
+    transition: border .5s ease-in-out;
+    padding-top: 1rem;
+}
+.portfolio .title{
+   color: var(--primary-color);
+   font-size: 1.8rem;
+   font-weight: 500;
+   padding-top: 1rem;
+}
+.portfolio .icon-box:hover{
+    border: 2px solid var(--primary-color);
+}
+.portfolio .btn{
+    color: white;
+    border-radius: 0;
+}
+.portfolio .btn i{
+margin-right: 1rem; 
+}
+.portfolio .btn-visit{
+    background-color: var(--primary-color);
+}
+.portfolio .btn-code{
+    background-color: var(--secondary-color);
+}
+
+/* service section  */
+
+.service .icon-box{
+    padding: 2.2rem;
+    border: 2px solid white;
+    transition: border .5s ease-in-out;
+    padding-top: 1rem;
+    text-align: center;
+}
+
+.service .icon-box .icon{
+    margin: 0 auto 20px auto;
+    padding-top: 17px;
+    display: inline-block;
+    border-radius: 50%;
+    width: 72px;
+    height: 72px;
+    background: #fff4df;
+}
+.service .icon-box .icon i{
+    font-size: 2rem;
+    line-height: 1;
+    color: #ffb727;
+}
+
+.service .title{
+   color: var(--primary-color);
+   font-size: 18px;
+   font-weight: 700;
+   padding-top: 1rem;
+}
+.service .icon-box p{
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.service .icon-box:hover{
+    border: 2px solid var(--primary-color);
+}
+
+/* Contact */
+.contact .info-box{
+    color: #444444;
+    text-align: center;
+    box-shadow: 0 0 30px rgb(214 215 216 / 60%);
+    padding: 20px 0 30px 0;
+}
+
+.contact .info-box i.bx{
+    font-size: 20px;
+    color: var(--primary-color);
+    border-radius: 50%;
+    padding: 12px;
+    background: #fff6e4;
+
+}
+.contact .info-box h3{
+    font-size: 20px;
+    color: #777777;
+    font-weight: 700;
+    margin: 10px 0;
+}
+.contact .social-links a{
+    font-size: 14px;
+    display: inline-block;
+    line-height: 1;
+    margin: 0 8px;
+    transition: 0.3s;
+    padding: 5px;
+    border-radius: 50px;
+    border: 1px solid #dde1e4;
+
+}
+
+.contact .social-links a:hover{
+    
+    border: 5px solid var(--primary-color);
+    padding: 0;
+
+
+
+}
+
+.contact .social-links p{
+    font-size: 14px;
+    line-height: 24px;
+    padding: 0;
+    margin-bottom: 0;
+
+}
+
+.contact .contact-form{
+    box-shadow: 0 0 30px rgb(214 215 216 / 60%);
+    padding: 34px;
+}
+.contact .contact-form input{
+    padding: 10px 15px;
+
+}
+.contact .contact-form input, .contact .contact-form textarea{
+    border-radius: 0;
+    box-shadow: none;
+    font-size: 14px;
+
+}
+
+.contact .contact-form button[type=submit] {
+    background: var(--primary-color);
+    border: 0;
+    padding: 10px 24px;
+    color: #fff;
+    transition: 0.4s;
+    border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+   .contact input#email {
+        margin-top: 1rem;
+    }
+}
+
+
+/* Footer  */
+#footer{
+    background: url(img/men-nature.jpg) top center no-repeat;
+    background-size: cover;
+    color: white;
+    font-size: 14px;
+    text-align: center;
+    padding: 80px 0;
+    position: relative;
+    z-index: 999;
+}
+#footer::before{
+    content: "";
+    
+    background: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+}
+#footer .container{
+    position: relative;
+}
+#footer h3{
+    font-size: 36px;
+    font-weight: 700;
+    color: #fff;
+    position: relative;
+    font-family: var(--font-Satisfy);
+    padding: 0;
+    margin: 0 0 15px 0;
+}
+
+#footer p{
+    font-size: 15px;
+    font-style: italic;
+    padding: 0;
+    margin: 0 0 40xp 0;
+}
+
+#footer .social-links{
+    margin: 0 0 40px 0;
+}
+#footer .social-links a{
+    font-size: 18px;
+    display: inline-block;
+    background: var(--primary-color);
+    color: white;
+    line-height: 1;
+    padding: 8px 0;
+    margin-right: 4px;
+    border-radius: 50%;
+    text-align: center;
+    width: 36px;
+    height: 36px;
+    transition: 0.3s;
+}
+
+#footer .copyright{
+    margin: 0 0 5px 0;
+}
